@@ -6,15 +6,15 @@ using namespace std;
 
 
 void result(int Mark)
-{
-	if (Mark >= 50)
 	{
-		cout << "Pass";
+		if (Mark >= 50)
+		{
+			cout << "Pass";
+		}
+		else {
+			cout << "Fail";
+		}
 	}
-	else {
-		cout << "Fail";
-	}
-}
 
 int main()
 {
