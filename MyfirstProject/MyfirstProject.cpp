@@ -4,76 +4,82 @@
 
 using namespace std;
 
+enum enWeekDay {
+    sun = 1,
+    mon = 2,
+    tue = 3,
+    wed = 4,
+    thu = 5,
+    fri = 6,
+    sat = 7
+};
 
-void result(string Month)
+
+
+void showWeekDayMenu()
 {
-
-
-	if (Month == "1")
-	{
-		cout << "January";
-	}
-	else if (Month == "2")
-	{
-		cout << "February";
-	}
-	else if (Month == "3")
-	{
-		cout << "March";
-	}
-	else if (Month == "4")
-	{
-		cout << "April";
-	}
-	else if (Month == "5")
-	{
-		cout << "May";
-	}
-	else if (Month == "6")
-	{
-		cout << "June";
-	}
-	else if (Month == "7")
-	{
-		cout << "July";
-	}
-	else if (Month == "8")
-	{
-		cout << "July";
-	}
-	else if (Month == "9")
-	{
-		cout << "August";
-	}
-	else if (Month == "10")
-	{
-		cout << "October";
-	}
-	else if (Month == "11")
-	{
-		cout << "November";
-
-	}
-	else if (Month == "12")
-	{
-		cout << "December";
-	}
-	else {
-		cout << "Wrong Month";
-	}
+	cout << "*************************\n";
+	cout << "\t Weekdays\n";
+	cout << "*************************\n";
+    cout << "1: Sunday\n";
+    cout << "2: Monday\n";
+    cout << "3: Tuesday\n";
+    cout << "4: Wednesday\n";
+    cout << "5: Thursday\n";
+    cout << "6: Friday\n";
+    cout << "7: Saturday\n";
+    cout << "*************************\n";
+    cout << "Please enter the number of day?\n";
 }
+
+
+enWeekDay ReadWeekDay()
+    {
+    int wd;
+    enWeekDay WeekDay;
+
+    cin >> wd;
+    WeekDay = (enWeekDay)wd;
+    return WeekDay;
+
+    }
+
+string GetWeekDayName(enWeekDay WeekDay)
+    {
+
+    switch (WeekDay) {
+    case enWeekDay::sun:
+        return "Sunday";
+        break;
+    case enWeekDay::mon:
+        return "Monday";
+        break;
+    case enWeekDay::tue:
+        return "Tuesday";
+        break;
+    case enWeekDay::wed:
+        return "Wednesday";
+        break;
+    case enWeekDay::thu:
+        return "Thursday";
+        break;
+    case enWeekDay::fri:
+        return "Friday";
+        break;
+    case enWeekDay::sat:
+        return "Saturday";
+        break;
+    default:
+        return "Invalid day";
+    }
+
+
+    }
 
 int main()
 {
-	string Month;
+	showWeekDayMenu();
 
-
-
-	cout << "Please enter your Month: ";
-	cin >> Month;
-
-
-	result(Month);
-
+    cout << "Today is: " << GetWeekDayName(ReadWeekDay())<< endl;
 
 }
