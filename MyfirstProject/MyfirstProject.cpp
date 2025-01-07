@@ -1,4 +1,4 @@
-// #26
+// #27
 #include <iostream>
 #include <string>
 
@@ -17,7 +17,8 @@ int inputValue()
 void theLoop()
 {
 	int input = inputValue();
-	for (int i = 1; i <= input; i++)
+
+	for (int i = input; i >= 1 ; i--)
 	{
 		cout << i << endl;
 	};
