@@ -14,14 +14,17 @@ int inputValue()
 	   
 }
 
+void theLoop()
+{
+	int input = inputValue();
+	for (int i = 1; i <= input; i++)
+	{
+		cout << i << endl;
+	};
+}
  
 
 int main()
 { 
-	int input = inputValue();
-	 
-	for (int i = 1; i <= input; i ++)
-	{
-		cout << i << endl;
-	};
+	theLoop();
 }
