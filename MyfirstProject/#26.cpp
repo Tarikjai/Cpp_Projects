@@ -8,7 +8,7 @@ using namespace std;
 int inputValue()
 {
 	int  input;
-	cout << "Please insert a number: ";
+	cout << "Please insert the number: ";
 	cin >> input;
 	return input;
 

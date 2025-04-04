@@ -16,8 +16,8 @@ int inputValue()
 
 void theLoop()
 {
-	 
-	
+
+
 	for (int i = inputValue(); i >= 1; i--)
 	{
 		cout << i << endl;
