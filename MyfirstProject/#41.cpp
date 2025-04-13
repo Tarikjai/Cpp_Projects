@@ -21,8 +21,6 @@ void readInfo(strInfo& info)
 	cin >> info.Age;
 	cout << "Please insert your Phone Number: ";
 	cin >> info.Phone;
-	cout << endl;
-
 }
 
 void printInfo(strInfo info)
@@ -32,36 +30,24 @@ void printInfo(strInfo info)
 	cout << "Last Name: " << info.LastName << endl;
 	cout << "Age: " << info.Age << endl;
 	cout << "Phone Number: " << info.Phone << endl;
-	cout << "**************************\n" << endl;
+	cout << "**************************\n";
 }
 
-void ReadPersonsInfo(strInfo Person[100], int& numberOfPersons)
+void readAll(strInfo Person[2])
 {
-	cout << "How many persons you wanna enter: " << endl;
-	cin >> numberOfPersons ;
-
-
-	for (int i = 0; i <= numberOfPersons - 1; i++)
-	{
-		cout << "Please enter Person [" << i + 1 << "] info:" <<endl;
-		readInfo(Person[i]);
-	}
+	readInfo(Person[0]);
+	readInfo(Person[1]);
 }
 
-void PrintPersonsInfo(strInfo Person[100], int numberOfPersons)
+void printAll(strInfo Person[2])
 {
-	for (int i = 0; i <= numberOfPersons - 1; i++)
-	{
-		cout << "Person [" << i+1 << "]";
-		printInfo(Person[i]);
-	}
+	printInfo(Person[0]);
+	printInfo(Person[1]);
 }
 
 int main()
 {
-	strInfo Person[100];
-	int numberOfPersons = 0;
-
-	ReadPersonsInfo(Person, numberOfPersons);
-	PrintPersonsInfo(Person, numberOfPersons);
+	strInfo Person[2];
+	readAll(Person);
+	printAll(Person);
 }
