@@ -8,7 +8,7 @@ using namespace std;
 int Readinput()
 {
 	int input;
-	cout << "Please enter your PIN: " ;
+	cout << "Please enter your PIN: ";
 	cin >> input;
 	return input;
 }
@@ -23,11 +23,11 @@ void validatePIN()
 	int balance = 7500;
 	int correctPIN = 1234;
 	int counter = 0;
-	
-	 
+
+
 	while (counter < 3)
 	{
-		if (Readinput() != correctPIN   )
+		if (Readinput() != correctPIN)
 		{
 
 			counter++;
@@ -37,19 +37,19 @@ void validatePIN()
 				return;
 			}
 			cout << "Wrong PIN" << endl;
-	
+
 		}
-		else  
+		else
 		{
 			yourBalance(balance);
 			return;
-			
+
 		}
-		
-		
+
+
 	}
 
-	 
+
 }
 
 
