@@ -8,14 +8,17 @@ using namespace std;
 int ReadNumber(int from, int to)
 {
 	int Number;
-	cout << "Please enter a number between " << from << " and " << to << endl;
-	cin >> Number;
+	do {
 
-	while (Number <= from || Number >= to)
-	{
 		cout << "Please enter a number between " << from << " and " << to << endl;
 		cin >> Number;
+
+
 	}
+
+
+	while (Number <= from || Number >= to);
+
 
 	return Number;
 }
