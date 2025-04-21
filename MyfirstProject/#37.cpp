@@ -16,27 +16,27 @@ int readNumbers()
 
 
 void  calculate()
-{	
+{
 	int sum = 0;
 	int newNumber = 0;
-	 
+
 	while (true)
-	 {
+	{
 		newNumber = readNumbers();
 
 		if (newNumber == -99)
 			break;
 
-		
+
 		sum += newNumber;
-		 
-	 } 
-	 cout << sum << endl;
+
+	}
+	cout << sum << endl;
 }
 
 
 int main()
 {
-	
+
 	calculate();
 }
